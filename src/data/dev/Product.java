@@ -116,13 +116,11 @@ public class Product {
         this.descriptions = scanner.nextLine();
         System.out.println("Enter Product Status: ");
         this.productStatus = Boolean.parseBoolean(scanner.nextLine());
-        System.out.println("Choose Catalog which Product belongs to: ");
-
 
     }
 
     public void displayProduct(){
-        System.out.printf("%-15s%-20s%-20s%-20s%-20s%-15s%-20s%-15s%-20s\n",this.productId,this.productName,this.title,this.importPrice,this.exportPrice,this.quantity,this.descriptions,this.productStatus,this.catalog);
+        System.out.printf("%-15s%-20s%-20s%-20s%-20s%-15s%-20s%-15s%-20s\n",this.productId,this.productName,this.title,this.importPrice,this.exportPrice,this.quantity,this.descriptions,this.productStatus,this.catalog.getCatalogName());
     }
 
     public void calExportPrice(){

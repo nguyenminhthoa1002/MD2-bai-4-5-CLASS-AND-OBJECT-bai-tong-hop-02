@@ -136,6 +136,22 @@ public class Menu {
             dataProduct[i] = new Product();
             dataProduct[i].inputProduct();
             indexProduct++;
+
+            System.out.println("Choose Catalog which Product belongs to: ");
+            for (int j = 0; j < indexCatalog; j++) {
+                System.out.printf("%d. %s\n",j+1,dataCatalog[j].getCatalogName());
+            }
+
+            System.out.println("Your choice is: ");
+            int chooseCatalog = Integer.parseInt(scanner.nextLine());
+            dataProduct[i].setCatalog(dataCatalog[chooseCatalog-1]);
+//
+//
+//            for (int k = 0; k < indexCatalog; k++) {
+//                if (chooseCatalog == (k+1)) {
+//                   dataProduct[i].setCatalog(dataCatalog[chooseCatalog-1]);
+//                }
+//            }
         }
     }
 
